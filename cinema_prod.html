@@ -25,13 +25,37 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <style type="text/css">
 
-    <!-- =======================================================
-    * Template Name: Lumia - v4.8.1
-    * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+        /*google translate Dropdown */
+
+        #google_translate_element select{
+            background:#f6edfd;
+            color:#383ffa;
+            border: none;
+            border-radius:3px;
+            padding:6px 8px
+        }
+
+        /*google translate link | logo */
+        .goog-logo-link{
+            display:none!important;
+        }
+        .goog-te-gadget{
+            color:transparent!important;
+        }
+
+        /* google translate banner-frame */
+
+        .goog-te-banner-frame{
+            display:none !important;
+        }
+
+        #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+        .goog-text-highlight { background: none !important; box-shadow: none !important;}
+
+        body{top:0!important;}
+    </style>
 </head>
 
 <body>
@@ -61,10 +85,12 @@
                     <ul>
                         <li><a href="formations.html">Formations</a></li>
                         <li><a href="across_morocco.html">A travers le maroc</a></li>
-                        <li><a href="#">Production cinématographique</a></li>
+                        <li><a href="cinema_prod.html">Production cinématographique</a></li>
                     </ul>
                 </li>
+                <!--<li><a class="nav-link">
 
+                </a></li>-->
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -83,8 +109,10 @@
             </a>
         </div>
 
+        <div id="google_translate_element" style="margin-left: 20px"></div>
     </div>
-</header><!-- End Header -->
+</header>
+<!-- End Header -->
 
 
 <main id="main" style="margin-top:70px">
@@ -116,7 +144,7 @@
 
     <div class="footer-top">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
 
                 <div class="col-lg-3 col-md-6 footer-contact">
                     <h3>S.2M.TC</h3>
@@ -134,14 +162,14 @@
                     </p>
                 </div>
 
-                <div class="col-lg-2 col-md-6 footer-links">
+                <!--<div class="col-lg-2 col-md-6 footer-links">
                     <h4>Liens utiles</h4>
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a>Acceuil</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a>A Propos de nous</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a>Services</a></li>
                     </ul>
-                </div>
+                </div>-->
 
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Nos services</h4>
@@ -149,6 +177,7 @@
                         <li><i class="bx bx-chevron-right"></i> <a>Recherche des informations</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a>Etudes économiques et Développement</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a>Marketing opérationnel</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a>Création de site web</a></li>
                     </ul>
                 </div>
 
@@ -161,7 +190,7 @@
 
 
             </div>
-            <div class="rowc justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="social-links text-center text-md-right pt-3 pt-md-0">
                         <a href="https://www.facebook.com/113674170349657/posts/501165538267183/" target="_blank"
@@ -171,7 +200,7 @@
                             <i class="bi bi-whatsapp"></i>
                         </a>
                         <a href="https://www.youtube.com/c/Ouhbale" target="_blank"><i
-                                class="bi bi-youtube"></i></i></a>
+                                class="bi bi-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -193,6 +222,14 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<!--Google translate api script-->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 

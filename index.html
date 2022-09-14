@@ -26,16 +26,40 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: Lumia - v4.8.1
-    * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+    <style type="text/css">
+
+        /*google translate Dropdown */
+
+        #google_translate_element select{
+            background:#f6edfd;
+            color:#383ffa;
+            border: none;
+            border-radius:3px;
+            padding:6px 8px
+        }
+
+        /*google translate link | logo */
+        .goog-logo-link{
+            display:none!important;
+        }
+        .goog-te-gadget{
+            color:transparent!important;
+        }
+
+        /* google translate banner-frame */
+
+        .goog-te-banner-frame{
+            display:none !important;
+        }
+
+        #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+        .goog-text-highlight { background: none !important; box-shadow: none !important;}
+
+        body{top:0!important;}
+    </style>
 </head>
 
 <body>
-
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
@@ -64,7 +88,9 @@
                         <li><a href="cinema_prod.html">Production cinématographique</a></li>
                     </ul>
                 </li>
+                <!--<li><a class="nav-link">
 
+                </a></li>-->
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -83,8 +109,10 @@
             </a>
         </div>
 
+        <div id="google_translate_element" style="margin-left: 20px"></div>
     </div>
-</header><!-- End Header -->
+</header>
+<!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
@@ -93,7 +121,8 @@
         <h2>S.2M.T.C gestion parfaite, meilleur contrôle, adaptation facile et présence sur le terrain</h2>
         <a href="#about" class="btn-get-started scrollto">Découvir</a>
     </div>
-</section><!-- End Hero -->
+</section>
+<!-- End Hero -->
 
 <main id="main">
 
@@ -127,15 +156,21 @@
                             nous permettre de proposer à nos clients une couverture optimale sur
                             l’integralité du territoire marocain.
                         </li>
+                        <li>
+                            <i class="bx bx-check-double"></i>
+                            Nous avons été amenés à toucher <b>des secteurs aussi variés</b>
+                            tel que les télécoms, la grande consommation, automobile, les banques, agriculture etc
+                        </li>
                     </ul>
                 </div>
             </div>
 
         </div>
-    </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
+    <!--<section id="counts" class="counts">
         <div class="container">
 
             <div class="row justify-content-center">
@@ -170,7 +205,8 @@
             </div>
 
         </div>
-    </section><!-- End Counts Section -->
+    </section>-->
+    <!-- End Counts Section -->
 
     <!-- ======= What We Do Section ======= -->
     <section id="services" class="what-we-do">
@@ -184,19 +220,19 @@
                 </p>
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
-                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                        <h4><a href="">Recherche des informations</a></h4>
+                        <div class="icon"><i class="bx bx-search"></i></div>
+                        <h4><a>Recherche des informations</a></h4>
                         <p></p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
-                        <div class="icon"><i class="bx bx-file"></i></div>
-                        <h4><a href="">Etudes économiques et développement</a></h4>
+                        <div class="icon"><i class="bx bx-line-chart"></i></div>
+                        <h4><a>Etudes économiques et développement</a></h4>
                         <p></p>
                     </div>
                 </div>
@@ -204,11 +240,20 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="icon-box">
                         <div class="icon"><i class="bx bx-tachometer"></i></div>
-                        <h4><a href="">Marketing opérationnel</a></h4>
+                        <h4><a>Marketing opérationnel</a></h4>
                         <p></p>
                     </div>
                 </div>
 
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxl-html5"></i></div>
+                        <h4><a>Création de site web</a></h4>
+                        <p></p>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -281,100 +326,6 @@
     </section>
     <!---End Principes sections--->
 
-    <!-- ======= Testimonials Section ======= -->
-    <!--<section id="testimonials" class="testimonials section-bg">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Témoignages</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
-            </div>
-
-            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                risus at semper.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                            <h3>Saul Goodman</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                        </div>
-                    </div>&lt;!&ndash; End testimonial item &ndash;&gt;
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                legam anim culpa.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                            <h3>Sara Wilsson</h3>
-                            <h4>Designer</h4>
-                        </div>
-                    </div>&lt;!&ndash; End testimonial item &ndash;&gt;
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
-                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                            <h3>Jena Karlis</h3>
-                            <h4>Store Owner</h4>
-                        </div>
-                    </div>&lt;!&ndash; End testimonial item &ndash;&gt;
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
-                                minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
-                                labore illum veniam.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                            <h3>Matt Brandon</h3>
-                            <h4>Freelancer</h4>
-                        </div>
-                    </div>&lt;!&ndash; End testimonial item &ndash;&gt;
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                culpa fore nisi cillum quid.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                            <h3>John Larson</h3>
-                            <h4>Entrepreneur</h4>
-                        </div>
-                    </div>&lt;!&ndash; End testimonial item &ndash;&gt;
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-    </section>-->
-    <!-- End Testimonials Section -->
-
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
         <div class="container">
@@ -414,7 +365,7 @@
 
             <div class="section-title">
                 <h2>Une sélection rigoureuse</h2>
-                <p>Nous enquêtreurs sont selectionnés avec soin d'après les critères suivant</p>
+                <p>Nous enquêteurs sont selectionnés avec soin d'après les critères suivant</p>
             </div>
 
             <div class="row">
@@ -497,7 +448,7 @@
 
             <div class="row mt-5 justify-content-center">
                 <div class="col-lg-10">
-                    <form action="mailto:info@w3docs.com" method="get" role="form" class="php-email-formm">
+                    <form action="mailto:ouhbaleevent@gmail.com" method="get" role="form" class="php-email-formm">
                         <div class="row">
                             <!--<div class="col-md-6 form-group">
                                 <input type="text" name="name" class="form-control" id="name" placeholder="Votre nom"
@@ -525,7 +476,8 @@
             </div>
 
         </div>
-    </section><!-- End Contact Section -->
+    </section>
+    <!-- End Contact Section -->
 
 </main><!-- End #main -->
 
@@ -534,7 +486,7 @@
 
     <div class="footer-top">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
 
                 <div class="col-lg-3 col-md-6 footer-contact">
                     <h3>S.2M.TC</h3>
@@ -552,14 +504,14 @@
                     </p>
                 </div>
 
-                <div class="col-lg-2 col-md-6 footer-links">
+                <!--<div class="col-lg-2 col-md-6 footer-links">
                     <h4>Liens utiles</h4>
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a>Acceuil</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a>A Propos de nous</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a>Services</a></li>
                     </ul>
-                </div>
+                </div>-->
 
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Nos services</h4>
@@ -567,6 +519,7 @@
                         <li><i class="bx bx-chevron-right"></i> <a>Recherche des informations</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a>Etudes économiques et Développement</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a>Marketing opérationnel</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a>Création de site web</a></li>
                     </ul>
                 </div>
 
@@ -579,7 +532,7 @@
 
 
             </div>
-            <div class="rowc justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="social-links text-center text-md-right pt-3 pt-md-0">
                         <a href="https://www.facebook.com/113674170349657/posts/501165538267183/" target="_blank"
@@ -589,7 +542,7 @@
                             <i class="bi bi-whatsapp"></i>
                         </a>
                         <a href="https://www.youtube.com/c/Ouhbale" target="_blank"><i
-                                class="bi bi-youtube"></i></i></a>
+                                class="bi bi-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -597,7 +550,7 @@
     </div>
 </footer><!-- End Footer -->
 
-<a class="back-to-top d-flex align-items-center justify-content-center"><i
+<a class="back-to-top d-flex align-items-center justify-content-center" href="#about"><i
         class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
@@ -611,6 +564,15 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+
+<!--Google translate api script-->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
