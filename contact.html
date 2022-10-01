@@ -55,7 +55,7 @@
           <ul>
             <li><a href="formations.html">Formations</a></li>
             <li><a href="across_morocco.html">A travers le maroc</a></li>
-            <li><a href="cinema_prod.html">Production cinématographique</a></li>
+            <li><a href="cinema.html">Production cinématographique</a></li>
           </ul>
         </li>
 
@@ -130,34 +130,33 @@
 
         </div>
 
-        <div class="row mt-5 justify-content-center">
-          <div class="col-lg-10">
-            <form action="mailto:ouhbaleevent@gmail.com" method="get" role="form" class="php-email-formm">
-              <div class="row">
-                <!--<div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Votre nom"
-                           required>
-                </div>-->
-                <!--<div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email"
-                           placeholder="Votre Email" required>
-                </div>-->
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Objet"
-                       required>
-              </div>
-              <div class="form-group mt-3">
-                            <textarea class="form-control" name="body" rows="5" placeholder="Message"
-                                      required></textarea>
-              </div>
-              <div class="text-center mt-2">
-                <button type="submit" class="btn btn-primary" style="width: 100%">Envoyer le mail</button>
+          <div class="row mt-5 justify-content-center">
+              <div class="col-lg-10">
+                  <form id="contact-form" method="post" role="form" class="php-email-form">
+                      <div class="row">
+                          <div class="col-md-6 form-group">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Votre nom" required>
+                          </div>
+                          <div class="col-md-6 form-group mt-3 mt-md-0">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Votre email" required>
+                          </div>
+                      </div>
+                      <div class="form-group mt-3">
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Objet" required>
+                      </div>
+                      <div class="form-group mt-3">
+                          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                      </div>
+                      <div class="my-3">
+                          <div class="loading">Chargement...</div>
+                          <div class="error-message"></div>
+                          <div id="sent-message">Votre message a été envoyé. Merci!</div>
+                      </div>
+                      <div class="text-center"><button type="submit">Envoyer le message</button></div>
+                  </form>
               </div>
 
-            </form>
           </div>
-        </div>
 
       </div>
     </section>
@@ -242,10 +241,33 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!--<script src="assets/vendor/php-email-form/validate.js"></script>-->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+    <!--Email service-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('F2II6Leqtsto6eygb');
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          emailjs.sendForm('service_k5gkxyv', 'template_gbil5i9', this)
+                  .then(function() {
+                    console.log('SUCCESS!');
+                    document.getElementById("sent-message").style.display = 'block';
+                  }, function(error) {
+                    console.log('FAILED...', error);
+                  });
+        });
+      }
+    </script>
 
 </body>
 
